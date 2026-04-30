@@ -1,3 +1,5 @@
+@use './variables';
+
 .header {
   box-sizing: border-box;
   width: 100%;
@@ -39,7 +41,7 @@
 .nav__link {
   height: 60px;
   text-decoration: none;
-  color: #060b35;
+  color: variables.$color-primary;
   text-transform: uppercase;
   position: relative;
   display: flex;
@@ -48,7 +50,7 @@
   transition: 300ms;
 
   &.is-active {
-    color: #00acdc;
+    color: variables.$color-accent;
 
     &::after {
       content: '';
@@ -57,12 +59,12 @@
       right: 0;
       bottom: 0;
       height: 4px;
-      background-color: #00acdc;
+      background-color: variables.$color-accent;
       border-radius: 8px;
     }
   }
 
   &:hover {
-    color: #00acdc;
+    color: variables.$color-accent;
   }
 }
